@@ -1,0 +1,22 @@
+function toPrice01() { document.getElementById("view").setAttribute("src", "formulas/price01.html") }
+function toPrice02() { document.getElementById("view").setAttribute("src", "formulas/price02.html") }
+function toPrice03() { document.getElementById("view").setAttribute("src", "formulas/price03.html") }
+function toPrice04() { document.getElementById("view").setAttribute("src", "formulas/price04.html") }
+function toPrice05() { document.getElementById("view").setAttribute("src", "formulas/price05.html") }
+function toPrice06() { document.getElementById("view").setAttribute("src", "formulas/price06.html") }
+function toPrice07() { document.getElementById("view").setAttribute("src", "formulas/price07.html") }
+function toPrice08() { document.getElementById("view").setAttribute("src", "formulas/price08.html") }
+function toPrice09() { document.getElementById("view").setAttribute("src", "formulas/price09.html") }
+function toPrice10() { document.getElementById("view").setAttribute("src", "formulas/price10.html") }
+
+function toSac01() { document.getElementById("view").setAttribute("src", "formulas/sac01.html") }
+function toSac02() { document.getElementById("view").setAttribute("src", "formulas/sac02.html") }
+function toSac03() { document.getElementById("view").setAttribute("src", "formulas/sac03.html") }
+function toSac04() { document.getElementById("view").setAttribute("src", "formulas/sac04.html") }
+function toSac05() { document.getElementById("view").setAttribute("src", "formulas/sac05.html") }
+function toSac06() { document.getElementById("view").setAttribute("src", "formulas/sac06.html") }
+function toSac07() { document.getElementById("view").setAttribute("src", "formulas/sac07.html") }
+function toSac08() { document.getElementById("view").setAttribute("src", "formulas/sac08.html") }
+function toSac09() { document.getElementById("view").setAttribute("src", "formulas/sac09.html") }
+function toSac10() { document.getElementById("view").setAttribute("src", "formulas/sac10.html") }
+function toSac11() { document.getElementById("view").setAttribute("src", "formulas/sac10.html") }

@@ -1,0 +1,2 @@
+Olá professor, para abrir o nosso projeto basta abrir o arquivo index.html
+Se por acaso ocorrer algum problema, tente abrir com outro navegador
