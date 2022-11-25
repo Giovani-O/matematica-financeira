@@ -28,14 +28,19 @@
         function calc() {
           let r = parseFloat(document.getElementById("r").value)
           let i = parseFloat(document.getElementById("i").value)
+
+          let iDecimal = i / 100
+
           let n = parseFloat(document.getElementById("n").value)
           let t = parseFloat(document.getElementById("t").value)
     
           let fva1 = Math.pow((1 + i), (n - t)+1) - 1
-          let fva2 = Math.pow((1 + i), (n  - t)+1) * i
+          let fva2 = Math.pow((1 + i), (n  - t)+1) * iDecimal
           let fva = fva1 / fva2
     
           let result = r * fva
+
+          document.getElementById("result").innerHTML = `Valor de Saldo devedor de ordem t-1: R$ ${result.toFixed(2)}`
           console.log(result)
         }
       </script>
@@ -49,10 +54,10 @@
         <input type="text" id="r" name="r" value="0">
     
         <p>FRC</p>
-        <label for="i">i</label>
+        <label for="i">Digite a taxa em porcentagem (%)</label>
         <input type="text" id="i" name="i" value="0">
     
-        <label for="n">n</label>
+        <label for="n">Digite o número de parcelas</label>
         <input type="text" id="n" name="n" value="0">
     
         <label for="t">t</label>
