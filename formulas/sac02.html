@@ -12,17 +12,50 @@
 
   <title>Hello, world!</title>
   <style>
-    div{
+    .wrap {
       height: 100vh;
       background-color: rgb(244, 245, 255);
-      padding: 12px 12px 12px 12px
+      padding: 12px 12px 12px 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      margin-bottom: 0px;
     }
   </style>
+
+  <script>
+    function calc() {
+      let a = parseFloat(document.getElementById("a").value)
+      let n = parseFloat(document.getElementById("n").value)
+      let t = parseFloat(document.getElementById("t").value)
+
+      let newN = n - t
+      let result = a * newN
+
+      document.getElementById("result").innerHTML = `O valor devido após ${t} prestações é: R$ ${result.toFixed(2)}`
+      console.log(result)
+    }
+  </script>
 </head>
 
 <body class="">
-  <div>
-    02
+  <div class="wrap">
+    <h3>Calcule o valor devido após determinado tempo (Saldo devedor de ordem t)</h3>
+
+    <label for="a">Valor da amortização (Valor da prestação)</label>
+    <input type="text" id="a" name="a" value="0">
+
+    <label for="n">Digite o número total de prestações (n)</label>
+    <input type="text" id="n" name="n" value="0">
+
+    <label for="t">Digite o número prestações pagas (t)</label>
+    <input type="text" id="t" name="t" value="0">
+
+    <button onclick="calc()" class="mt-4 btn btn-success">Calcular</button>
+
+    <h2 class="mt-4" id="result">Valor devido: R$ 0,00</h2> 
   </div>
 
   <!-- Bootstrap -->
