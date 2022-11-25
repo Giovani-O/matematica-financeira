@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+<<head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,17 +12,53 @@
 
   <title>Hello, world!</title>
   <style>
-    div{
+    .wrap {
       height: 100vh;
       background-color: rgb(244, 245, 255);
-      padding: 12px 12px 12px 12px
+      padding: 12px 12px 12px 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      margin-bottom: 0px;
     }
   </style>
-</head>
 
-<body class="">
-  <div>
-    Hmmm
+  <script>
+    function calc() {
+      let a1 = parseFloat(document.getElementById("a1").value)
+      let i = parseFloat(document.getElementById("i").value)
+      let iDecimal = i / 100
+      let t = parseFloat(document.getElementById("t").value)
+      let n = parseFloat(document.getElementById("n").value)
+
+     
+
+      let result = a1 *  Math.pow((1 + iDecimal), t-1)
+      document.getElementById("result").innerHTML = `Valor da primeira Amortização ${result.toFixed(2)}`
+      console.log(result)
+    }
+  </script>
+</head> 
+
+<body>
+  <div class="wrap">
+    <h3>Valor da parcela de Amortização em t</h3>
+
+    <label for="a1">A1</label>
+    <input type="text" id="a1" name="a1" value="0">
+
+    
+    <label for="i">Digite a taxa em porcentagem (%)</label>
+    <input type="text" id="i" name="i" value="0">
+
+    <label for="t">t</label>
+    <input type="text" id="t" name="t" value="0">
+
+    <button onclick="calc()" class="mt-4 btn btn-success">Calcular</button>
+
+    <h2 class="mt-4" id="result">Valor da parcela de Amortização em t</h2> 
   </div>
 
   <!-- Bootstrap -->
@@ -30,5 +66,4 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 </body>
-
 </html>
