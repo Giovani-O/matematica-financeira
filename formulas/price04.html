@@ -26,21 +26,12 @@
       </style>
       <script>
         function calc() {
-          let r = parseFloat(document.getElementById("r").value)
-          let i = parseFloat(document.getElementById("i").value)
-
-          let iDecimal = i / 100
-
-          let n = parseFloat(document.getElementById("n").value)
-          let t = parseFloat(document.getElementById("t").value)
+          let i = parseFloat(document.getElementById("i").value.replace(",", ".")) / 100
+          let pt = parseFloat(document.getElementById("pt").value.replace(",", "."))
     
-          let fva1 = Math.pow((1 + i), (n - t)+1) - 1
-          let fva2 = Math.pow((1 + i), (n  - t)+1) * iDecimal
-          let fva = fva1 / fva2
-    
-          let result = r * fva
+          let result = i * pt
 
-          document.getElementById("result").innerHTML = `Valor de Saldo devedor de ordem t-1: R$ ${result.toFixed(2)}`
+          document.getElementById("result").innerHTML = `O valor dos juros na próxima parcela é: R$ ${result.toFixed(2)}`
           console.log(result)
         }
       </script>
@@ -48,24 +39,17 @@
     
     <body>
       <div class="wrap">
-        <h3>Valor Parcela de Juros de ordem t</h3>
+        <h3>Calcular o valor dos juros sobre uma parcela específica</h3>
     
-        <label for="r">r</label>
-        <input type="text" id="r" name="r" value="0">
-    
-        <p>FRC</p>
-        <label for="i">Digite a taxa em porcentagem (%)</label>
+        <label for="i">Digite a taxa de juros em porcentagem (%)</label>
         <input type="text" id="i" name="i" value="0">
     
-        <label for="n">Digite o número de parcelas</label>
-        <input type="text" id="n" name="n" value="0">
-    
-        <label for="t">t</label>
-        <input type="text" id="t" name="t" value="0">
+        <label for="pt">Digite o valor devido atualmente (Pt)</label>
+        <input type="text" id="pt" name="pt" value="0">
     
         <button onclick="calc()" class="mt-4 btn btn-success">Calcular</button>
     
-        <h2 class="mt-4" id="result">Pt-1 = 0</h2>
+        <h2 class="mt-4" id="result">O valor dos juros é: R$ 0,00</h2>
       </div>
     
       <!-- Bootstrap -->

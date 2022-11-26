@@ -27,15 +27,12 @@
   
     <script>
       function calc() {
-        let p0 = parseFloat(document.getElementById("p0").value)
-        let i = parseFloat(document.getElementById("i").value)
-        let iDecimal = i / 100
-        let n = parseFloat(document.getElementById("n").value)
+        let p0 = parseFloat(document.getElementById("p0").value.replace(",", "."))
+        let i = parseFloat(document.getElementById("i").value.replace(",", ".")) / 100
+        let r = parseFloat(document.getElementById("r").value.replace(",", "."))
   
-       
-  
-        let result = r - iDecimal * p0
-        document.getElementById("result").innerHTML = `Valor da primeira Amortização ${result.toFixed(2)}`
+        let result = r - i * p0
+        document.getElementById("result").innerHTML = `Valor da primeira Amortização: ${result.toFixed(2)}`
         console.log(result)
       }
     </script>
@@ -43,21 +40,21 @@
   
   <body>
     <div class="wrap">
-      <h3>Valor da primeira armotização</h3>
+      <h3>Calcular o valor da primeira amortização (Redução da dívida)</h3>
   
-      <label for="p0">Valor financiado</label>
+      <label for="p0">Valor financiado (p0)</label>
       <input type="text" id="p0" name="p0" value="0">
   
       
-      <label for="i">Digite a taxa em porcentagem (%)</label>
+      <label for="i">Digite a taxa de juros em porcentagem (%)</label>
       <input type="text" id="i" name="i" value="0">
   
-      <label for="r">Valor das prestações</label>
+      <label for="r">Valor das prestações (R)</label>
       <input type="text" id="r" name="r" value="0">
   
       <button onclick="calc()" class="mt-4 btn btn-success">Calcular</button>
   
-      <h2 class="mt-4" id="result">Valor das prestações: R$ 0</h2> 
+      <h2 class="mt-4" id="result">Valor da primeira amortização: R$ 0,00</h2> 
     </div>
   
     <!-- Bootstrap -->

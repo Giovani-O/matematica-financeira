@@ -27,16 +27,12 @@
 
   <script>
     function calc() {
-      let a1 = parseFloat(document.getElementById("a1").value)
-      let i = parseFloat(document.getElementById("i").value)
-      let iDecimal = i / 100
+      let a1 = parseFloat(document.getElementById("a1").value.replace(",", "."))
+      let i = parseFloat(document.getElementById("i").value.replace(",", ".")) / 100
       let t = parseFloat(document.getElementById("t").value)
-      let n = parseFloat(document.getElementById("n").value)
 
-     
-
-      let result = a1 *  Math.pow((1 + iDecimal), t-1)
-      document.getElementById("result").innerHTML = `Valor da parcela de Amortização ${result.toFixed(2)}`
+      let result = a1 *  Math.pow((1 + i), t-1)
+      document.getElementById("result").innerHTML = `O valor da amortização na parcela ${t} é: R$ ${result.toFixed(2)}`
       console.log(result)
     }
   </script>
@@ -44,21 +40,21 @@
 
 <body>
   <div class="wrap">
-    <h3>Valor da parcela de Amortização em t</h3>
+    <h3>Valor da amortização em uma parcela específica</h3>
 
-    <label for="a1">A1</label>
+    <label for="a1">Valor da primeira amortização (A1)</label>
     <input type="text" id="a1" name="a1" value="0">
 
     
-    <label for="i">Digite a taxa em porcentagem (%)</label>
+    <label for="i">Digite a taxa de juros em porcentagem (%)</label>
     <input type="text" id="i" name="i" value="0">
 
-    <label for="t">t</label>
+    <label for="t">Número da parcela específica (t)</label>
     <input type="text" id="t" name="t" value="0">
 
     <button onclick="calc()" class="mt-4 btn btn-success">Calcular</button>
 
-    <h2 class="mt-4" id="result">Valor da parcela de Amortização em t</h2> 
+    <h2 class="mt-4" id="result">O valor da amortização é: R$ 0,00</h2> 
   </div>
 
   <!-- Bootstrap -->
