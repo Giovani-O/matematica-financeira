@@ -28,8 +28,8 @@
   <script>
     function calc() {
       let a = parseFloat(document.getElementById("a").value.replace(",", "."))
-      let n = parseFloat(document.getElementById("n").value)
-      let t = parseFloat(document.getElementById("t").value)
+      let n = parseFloat(document.getElementById("n").value.replace(",", "."))
+      let t = parseFloat(document.getElementById("t").value.replace(",", "."))
 
       let newN = n - t
       let result = a * newN
@@ -44,7 +44,7 @@
   <div class="wrap">
     <h3>Calcule o valor devido após determinado tempo (Saldo devedor de ordem t)</h3>
 
-    <label for="a">Valor da amortização</label>
+    <label for="a">Valor da amortização (A)</label>
     <input type="text" id="a" name="a" value="0">
 
     <label for="n">Digite o número total de prestações (n)</label>

@@ -28,9 +28,9 @@
   <script>
     function calc() {
       let a = parseFloat(document.getElementById("a").value.replace(",", "."))
-      let t = parseFloat(document.getElementById("t").value)
+      let t = parseFloat(document.getElementById("t").value.replace(",", "."))
       let i = parseFloat(document.getElementById("i").value.replace(",", ".")) / 100
-      let n = parseFloat(document.getElementById("n").value)
+      let n = parseFloat(document.getElementById("n").value.replace(",", "."))
 
       let parenthesis = 2 * n - t + 1
       let brackets = 1 + i * (parenthesis / 2)

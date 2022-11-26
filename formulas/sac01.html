@@ -27,8 +27,8 @@
 
 <script>
   function calc() {
-    let p0 = parseFloat(document.getElementById("p0").value)
-    let n = parseFloat(document.getElementById("n").value)
+    let p0 = parseFloat(document.getElementById("p0").value.replace(",", "."))
+    let n = parseFloat(document.getElementById("n").value.replace(",", "."))
 
     let result = p0 / n;
     document.getElementById("result").innerHTML = `Valor da amortização: R$ ${result.toFixed(2)}`
@@ -41,10 +41,10 @@
   <div class="wrap">
     <h3>Calcule o valor da amortização (Redução do valor da dívida)</h3>
 
-    <label for="p0">Valor financiado</label>
+    <label for="p0">Valor financiado (p0)</label>
     <input type="text" id="p0" name="p0" value="0">
 
-    <label for="n">Digite o número de prestações</label>
+    <label for="n">Digite o número de prestações (n)</label>
     <input type="text" id="n" name="n" value="0">
 
     <button onclick="calc()" class="mt-4 btn btn-success">Calcular</button>

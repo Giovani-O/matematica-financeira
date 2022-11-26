@@ -29,8 +29,8 @@
     function calc() {
       let a = parseFloat(document.getElementById("a").value.replace(",", "."))
       let i = parseFloat(document.getElementById("i").value.replace(",", ".")) / 100
-      let n = parseFloat(document.getElementById("n").value)
-      let t = parseFloat(document.getElementById("t").value)
+      let n = parseFloat(document.getElementById("n").value.replace(",", "."))
+      let t = parseFloat(document.getElementById("t").value.replace(",", "."))
 
       let parenthesis = n - t + 1
       let bracket = 1 + i * parenthesis
@@ -47,16 +47,16 @@
   <div class="wrap">
     <h3>Calcular o valor de uma prestação específica</h3>
 
-    <label for="a">Valor da amortização</label>
+    <label for="a">Valor da amortização (A)</label>
     <input type="text" id="a" name="a" value="0">
 
     <label for="i">Digite a taxa de juros em porcentagem (%)</label>
     <input type="text" id="i" name="i" value="0">
 
-    <label for="n">Digite o número total de prestações</label>
+    <label for="n">Digite o número total de prestações (n)</label>
     <input type="text" id="n" name="n" value="0">
 
-    <label for="t">Digite o número da prestação que você quer consultar</label>
+    <label for="t">Digite o número da prestação que você quer consultar (t)</label>
     <input type="text" id="t" name="t" value="0">
 
     <button onclick="calc()" class="mt-4 btn btn-success">Calcular</button>
