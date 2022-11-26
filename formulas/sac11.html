@@ -12,17 +12,45 @@
 
   <title>Hello, world!</title>
   <style>
-    div{
+    .wrap {
       height: 100vh;
       background-color: rgb(244, 245, 255);
-      padding: 12px 12px 12px 12px
+      padding: 12px 12px 12px 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      margin-bottom: 0px;
     }
   </style>
+
+  <script>
+    function calc() {
+      let a = parseFloat(document.getElementById("a").value.replace(",", "."))
+      let i = parseFloat(document.getElementById("i").value.replace(",", ".")) / 100
+
+      let result = i * a;
+
+      document.getElementById("result").innerHTML = `A cada mês, as prestações ficam: R$ ${result.toFixed(2)} mais baratas`
+      console.log(result)
+    }
+  </script>
 </head>
 
 <body class="">
-  <div>
-    Hmmm
+  <div class="wrap">
+    <h3>Calcular o quanto a prestação vai diminuir mês após mês</h3>
+
+    <label for="a">Valor da amortização (A)</label>
+    <input type="text" id="a" name="a" value="0">
+
+    <label for="i">Digite a taxa de juros em porcentagem (%)</label>
+    <input type="text" id="i" name="i" value="0">
+
+    <button onclick="calc()" class="mt-4 btn btn-success">Calcular</button>
+
+    <h2 class="mt-4" id="result">A cada mês, as prestações ficam: R$ 0,00 mais baratas</h2>
   </div>
 
   <!-- Bootstrap -->

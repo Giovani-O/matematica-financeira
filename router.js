@@ -19,4 +19,4 @@ function toSac07() { document.getElementById("view").setAttribute("src", "formul
 function toSac08() { document.getElementById("view").setAttribute("src", "formulas/sac08.html") }
 function toSac09() { document.getElementById("view").setAttribute("src", "formulas/sac09.html") }
 function toSac10() { document.getElementById("view").setAttribute("src", "formulas/sac10.html") }
-function toSac11() { document.getElementById("view").setAttribute("src", "formulas/sac10.html") }
+function toSac11() { document.getElementById("view").setAttribute("src", "formulas/sac11.html") }
