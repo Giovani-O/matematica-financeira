@@ -1,2 +1,14 @@
-# matematica-financeira
+## matematica-financeira
 Prova de matemática financeira - 2º semestre/2022
+
+Giovani de Oliveira - 058657
+Demilson de Jesus - 056630
+
+# Instruções de uso
+
+Olá professor, aqui estão as instruções para executar o nosso site, caso o senhor faça download do projeto.
+* Lembrando que é preciso baixar todos os arquivos do projeto!
+
+- Para executar o projeto em si, basta abrir o arquivo index.html, esse arquivo deve ser aberto em algum navegador como Google Chrome ou Firefox;
+
+- Para ver o código, o senhor pode olhar aqui no GitHub mesmo, ou abrir os arquivos .html do projeto em um editor de texto
