@@ -7,7 +7,9 @@ Demilson de Jesus - 056630
 # Instruções de uso
 
 Olá professor, aqui estão as instruções para executar o nosso site, caso o senhor faça download do projeto.
-* Lembrando que é preciso baixar todos os arquivos do projeto, que estão na pasta matematica-financeira!
+- O site está disponível para uso em: [https://giovani-o.github.io/matematica-financeira/](https://giovani-o.github.io/matematica-financeira/)
+
+- Lembrando que é preciso baixar todos os arquivos do projeto, que estão na pasta matematica-financeira!
 
 - Para executar o projeto em si, basta abrir o arquivo index.html, esse arquivo deve ser aberto em algum navegador como Google Chrome ou Firefox;
 
