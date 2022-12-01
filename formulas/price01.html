@@ -27,10 +27,10 @@
 
   <script>
     function calc() {
-      let p0 = parseFloat(document.getElementById("p0").value)
-      let i = parseFloat(document.getElementById("i").value)
+      let p0 = parseFloat(document.getElementById("p0").value.replace(",", "."))
+      let i = parseFloat(document.getElementById("i").value.replace(",", "."))
       let iDecimal = i / 100
-      let n = parseFloat(document.getElementById("n").value)
+      let n = parseFloat(document.getElementById("n").value.replace(",", "."))
 
       let frc1 = Math.pow((1 + iDecimal), n) * iDecimal
       let frc2 = Math.pow((1 + iDecimal), n) - 1
@@ -45,7 +45,7 @@
 
 <body>
   <div class="wrap">
-    <h3>Calcule o valor das suas prestações</h3>
+    <h3>1. Calcule o valor das suas prestações</h3>
 
     <label for="p0">Valor financiado (p0)</label>
     <input type="text" id="p0" name="p0" value="0">

@@ -26,9 +26,9 @@
       function calc() {
         let r = parseFloat(document.getElementById("r").value.replace(",", "."))
         let i = parseFloat(document.getElementById("i").value.replace(",", ".")) / 100
-        let n = parseFloat(document.getElementById("n").value)
-        let pi = parseFloat(document.getElementById("pi").value) - 1 // t
-        let pf = parseFloat(document.getElementById("pf").value)
+        let n = parseFloat(document.getElementById("n").value.replace(",", "."))
+        let pi = parseFloat(document.getElementById("pi").value.replace(",", ".")) - 1 // t
+        let pf = parseFloat(document.getElementById("pf").value.replace(",", "."))
         let k = pf - pi
 
         let n1 = n - pi
@@ -54,7 +54,7 @@
   
   <body>
     <div class="wrap">
-      <h3>Calcular soma dos juros acumulados durante um período</h3>
+      <h3>10. Calcular soma dos juros acumulados durante um período</h3>
   
       <label for="r">Digite o valor das parcelas (R)</label>
       <input type="text" id="r" name="r" value="0">

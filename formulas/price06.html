@@ -29,7 +29,7 @@
     function calc() {
       let a1 = parseFloat(document.getElementById("a1").value.replace(",", "."))
       let i = parseFloat(document.getElementById("i").value.replace(",", ".")) / 100
-      let t = parseFloat(document.getElementById("t").value)
+      let t = parseFloat(document.getElementById("t").value.replace(",", "."))
 
       let result = a1 *  Math.pow((1 + i), t-1)
       document.getElementById("result").innerHTML = `O valor da amortização na parcela ${t} é: R$ ${result.toFixed(2)}`
@@ -40,7 +40,7 @@
 
 <body>
   <div class="wrap">
-    <h3>Valor da amortização em uma parcela específica</h3>
+    <h3>6. Valor da amortização em uma parcela específica</h3>
 
     <label for="a1">Valor da primeira amortização (A1)</label>
     <input type="text" id="a1" name="a1" value="0">

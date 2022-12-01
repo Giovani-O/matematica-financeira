@@ -29,8 +29,8 @@
       let r = parseFloat(document.getElementById("r").value.replace(",", "."))
       let i = parseFloat(document.getElementById("i").value.replace(",", ".")) / 100
 
-      let n = parseFloat(document.getElementById("n").value)
-      let t = parseFloat(document.getElementById("t").value) - 1
+      let n = parseFloat(document.getElementById("n").value.replace(",", "."))
+      let t = parseFloat(document.getElementById("t").value.replace(",", "."))
 
       let fva1 = Math.pow((1 + i), n - t) - 1
       let fva2 = Math.pow((1 + i), n - t) * i
@@ -45,7 +45,7 @@
 
 <body>
   <div class="wrap">
-    <h3>Calcular valor devedor em uma parcela específica</h3>
+    <h3>2. Calcular valor devedor em uma parcela específica</h3>
 
     <label for="r">Digite o valor da prestação (R)</label>
     <input type="text" id="r" name="r" value="0">
