@@ -6,7 +6,7 @@ Demilson de Jesus - 056630
 
 # Instruções de uso
 
-Olá professor, aqui estão as instruções para executar o nosso site, e verificar o código.
+Olá professor, aqui estão as instruções para executar o nosso site e verificar o código.
 - O site está disponível para uso em: [https://giovani-o.github.io/matematica-financeira/](https://giovani-o.github.io/matematica-financeira/)
 
 - Para executar o site localmente é preciso baixar todos os arquivos do projeto, que estão na pasta matematica-financeira!
